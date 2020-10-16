@@ -45,7 +45,7 @@ Enter minicom setting menu:
 Run minicom with specific boud rate (also supports boud rates that not available in settings menu):
 
 ```$ sudo minicom -b <boud_rate>```
-Examples of boud rates: 9600, 115200, 500000
+Examples of boud rates: 9600, 115200, 500000, 1000000
 
 Display characters in hex format:
 
