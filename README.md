@@ -24,34 +24,27 @@ Reception of characters by USART and comparation of received character to expect
 
 Arduino firmware burn using avrdude in Linux:
 ===============================================
-General command format:
-
+General command format:\
 ```$ sudo avrdude -p <chip_version> -P <device> -c arduino -b 115200 -U flash:w:<hex_image>```
 
-Example (Arduino Uno / Atmaga328p):
-
+Example (Arduino Uno / Atmaga328p):\
 ```$ sudo avrdude -p m328p -P /dev/ttyACM0 -c arduino -b 115200 -U flash:w:1_8_bit_timer.hex```
 
-Device check:</ br>
-
+Device check:\
 ```$ dmesg | grep tty```
 
 Usefull minicom commands for work with USART:
 =============================================
-Enter minicom setting menu:
-
+Enter minicom setting menu:\
 ```$ sudo minicom -s```
 
-Run minicom with specific boud rate (also supports boud rates that not available in settings menu):
-
-```$ sudo minicom -b <boud_rate>```
+Run minicom with specific boud rate (also supports boud rates that not available in settings menu):\
+```$ sudo minicom -b <boud_rate>```\
 Examples of boud rates: 9600, 115200, 500000, 1000000
 
-Display characters in hex format:
-
+Display characters in hex format:\
 ```$ sudo minicom -H```
 
-Store received data to file:
-
+Store received data to file:\
 ```$ sudo minicom -C <file_path>```
 
