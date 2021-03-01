@@ -1,28 +1,28 @@
 Description:
 ==============
-This repository include examples of assembly programs for Atmega328p (AVR family 8-bit microcontroller which used in Arduino Uno). Examples written using Atmel Studio assembly and concentrated for knowledge share.
+This repository include examples of assembly programs for Atmega328p (AVR family 8-bit microcontroller which used in Arduino Uno). Examples written using Atmel Studio assembly and concentrated in this repository for knowledge share. It may be usefull for prople who want to undersand how AVR microcontrollers works. Using assembly it is good way to undersand the architecture and to controll the microcontroller on low level.
 
 List of examples:
 =================
 #### 1. 8  bit Timer 0
-Pin (Pin 1 Port B) flipping by timer at pattern matching and handling by interrupt handler.
+Pin (Pin 1 Port B) state flipping by timer's (counter) interrupt. Pin voltage flips at counter pattern match and handles by interrupt handler.
 #### 2. 16 bit Timer 1
-Pin (Pin 1 Port B) flipping every second by timer at pattern matching and handling by interrupt handler. 
-(Counting cycle time = 15625 (OCR1A) * 1024 (Prescaler 1024) / 16000000 (System Clock 16MHz) = 1 second)
+Pin (Pin 1 Port B) state flipping every second by timer (counter). Pin voltage flips at counter pattern match and handles by interrupt handler.  
+(Counting cycle time: Cycle time = 15625 (OCR1A) * 1024 (Prescaler 1024) / 16000000 (System Clock 16MHz) = 1 second)
 #### 3. USART TX (transmission)
-Transmission of word "hello" by USART. 
+Transmission of word "hello" by USART.  
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
 #### 4. USART RX (reception)
-Reception of characters by USART and comparison of received character to expected value. Change pins status in case of match.
+Reception of characters by USART and comparison of received character to expected value. In case of match programm change pin's state.  
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
-#### 5. USART interrupts
-Reception of characters by USART and sending it back.
+#### 5. USART TX/RX interrupts
+Reception of characters by USART and sending it back.  
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
-#### 6. ADC single sample
-Sampling of analog pin 0 at USART character reception and sending sampled value by USART.
+#### 6. ADC single sample at request by USART
+Controlled sampling of analog pin 0 by USART character reception and sending sample by USART.  
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
-#### 7. ADC samples flow
-Sampling of analog pin 0 in cycle and sending sample values by USART.
+#### 7. ADC samples flow by USART
+Sampling of analog pin 0 in cycle and sending samples by USART.  
 (USART configuration: baud rate 1000000, single stop bit, disabled parity check, 8 bits for character)
 
 Arduino firmware burn using avrdude in Linux:
@@ -38,7 +38,7 @@ Device check:\
 
 Usefull minicom commands for work with USART:
 =============================================
-Enter minicom setting menu:\
+Enter minicom settings menu:\
 ```$ sudo minicom -s```
 
 Run minicom with specific baud rate (also supports baud rates that not available in settings menu):\
