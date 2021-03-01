@@ -13,7 +13,7 @@ Counting cycle time: Cycle time = 15625 (OCR1A) * 1024 (Prescaler 1024) / 160000
 Transmission of word "hello" by USART.  
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
 #### 4. USART RX (reception)
-Reception of characters by USART and comparison of received character to expected value. In case of match programm change pin's state.  
+Reception of characters by USART and comparison of each received character to expected value. In case there is a match, the program changes the state of the pin. 
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
 #### 5. USART TX/RX interrupts
 Reception of characters by USART and sending it back.  
