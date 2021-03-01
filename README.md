@@ -1,6 +1,6 @@
 Description:
 ==============
-This repository include examples of short assembly programs for Atmega328p (AVR family 8-bit microcontroller which used in Arduino Uno). Examples written using Atmel Studio assembly and concentrated in this repository for knowledge share. It may be usefull for prople who want to undersand how AVR microcontrollers works. Using assembly it is good way to undersand the architecture and to controll the microcontroller on low level.
+This repository include examples of short assembly programs for Atmega328p (AVR family 8-bit microcontroller which used in Arduino Uno). Examples written using Atmel Studio assembly and concentrated in this repository for knowledge share. It may be usefull for people who want to undersand how AVR microcontrollers works. Using assembly it is good way to undersand the architecture and to controll the microcontroller on low level.
 
 List of examples:
 =================
