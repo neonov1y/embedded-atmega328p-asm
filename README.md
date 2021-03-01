@@ -8,7 +8,7 @@ List of examples:
 Pin (Pin 1 Port B) state flipping by timer's (counter) interrupt. Pin voltage flips at counter pattern match and handles by interrupt handler.
 #### 2. 16 bit Timer 1
 Pin (Pin 1 Port B) state flipping every second by timer (counter). Pin voltage flips at counter pattern match and handles by interrupt handler.  
-(Counting cycle time: Cycle time = 15625 (OCR1A) * 1024 (Prescaler 1024) / 16000000 (System Clock 16MHz) = 1 second)
+Counting cycle time: Cycle time = 15625 (OCR1A) * 1024 (Prescaler 1024) / 16000000 (System Clock 16MHz) = 1 second
 #### 3. USART TX (transmission)
 Transmission of word "hello" by USART.  
 (USART configuration: baud rate 9600, single stop bit, disabled parity check, 8 bits for character)
